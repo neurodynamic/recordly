@@ -119,12 +119,12 @@ end
 
 # Test
 group :test do
-  # gem 'factory_girl_rails'
-  # gem 'minitest'
-  # gem 'minitest-rails'
-  # gem 'database_cleaner'
-  # gem 'minitest-spec-rails'
-  # gem 'launchy'
+  gem 'factory_girl_rails'
+  gem 'minitest'
+  gem 'minitest-rails'
+  gem 'database_cleaner'
+  gem 'minitest-spec-rails'
+  gem 'launchy'
   # gem 'email_spec'
   # gem 'timecop'
 end
