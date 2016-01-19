@@ -1,5 +1,4 @@
 require 'faker'
-require 'database_cleaner'
 
 task generate_clean_random_sample_data: :environment do
   Rake::Task['clear_db'].execute
@@ -34,7 +33,8 @@ end
 
 task clear_db: :environment do
   puts "Clearing DB..."
-  DatabaseCleaner.strategy = :truncation
-  DatabaseCleaner.clean
+  Song.destroy_all
+  Album.destroy_all
+  Artist.destroy_all
   puts "DB cleared."
 end
