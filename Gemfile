@@ -68,7 +68,7 @@ gem 'rubocop', require: false
 
 # Views/Assets
 gem 'slim-rails'
-# gem 'materialize-sass'
+gem 'materialize-sass'
 # gem 'foundation-rails'
 gem 'font-awesome-rails'
 gem 'jquery-ui-rails'
