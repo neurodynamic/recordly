@@ -1,7 +1,7 @@
 class AlbumsController < ApplicationController
   def index
-    if params[:search].present?
-      @albums = Album.where(name: params[:search]).includes(:artist)
+    if params[:query].present?
+      @albums = Album.search(params[:query]).includes(:artist)
     end
 
     @albums ||= Album.all.includes(:artist)
