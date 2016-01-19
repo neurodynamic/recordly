@@ -15,10 +15,26 @@ feature 'AlbumSearch' do
 
   scenario 'search shows only matching albums' do
     visit root_path
-    fill_in 'search', with: @album.name
+    fill_in 'query', with: @album.name
     click_button 'Search'
 
     page.must_have_content @album.name
     page.wont_have_content @nonmatching_album.name
+  end
+
+  scenario 'search matches case insensitively' do
+    visit root_path
+    fill_in 'query', with: @album.name.upcase
+    click_button 'Search'
+
+    page.must_have_content @album.name
+  end
+
+  scenario 'search matches prefixes' do
+    visit root_path
+    fill_in 'query', with: @album.name[0..2]
+    click_button 'Search'
+
+    page.must_have_content @album.name
   end
 end
