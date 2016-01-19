@@ -1,9 +1,10 @@
 h1.center Albums
 
 - @albums.each do |album|
-  .card-panel.album
-    .album__title
-      = album.name
+  = link_to album do
+    .card-panel.album
+      .album__title
+        = album.name
 
-    .album__description
-      = album.description
+      .album__description
+        = album.description

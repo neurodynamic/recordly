@@ -1,5 +1,7 @@
-h1= @album.name
+.album-details
 
-.card-panel
-  ul= @album.songs.each do |song|
-    li= song.name
+  h1= @album.name
+
+  ol
+    - @album.songs.each do |song|
+      li= song.name
