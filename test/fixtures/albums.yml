@@ -1,0 +1,12 @@
+# Read about fixtures at
+# http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  release_year: 1
+  artist: 
+
+two:
+  name: MyString
+  release_year: 1
+  artist: 
