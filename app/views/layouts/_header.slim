@@ -1,0 +1,9 @@
+nav
+  ul.left
+    li
+      h1= link_to app_name, root_path
+  ul.right
+    li= link_to "Link 1", "#"
+/     - if admin_signed_in?
+/       li class=active_if_something
+/         = link_to 'Something Restricted', something_restricted_path

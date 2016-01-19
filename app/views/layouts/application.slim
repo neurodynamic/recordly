@@ -1,0 +1,27 @@
+doctype html
+html lang="en" 
+  head
+    meta charset="utf-8" /
+    meta content="width=device-width, initial-scale=1.0" name="viewport" /
+    title= content_for?(:title) ? yield(:title) : @app_name
+    - if Rails.env.development?
+      = favicon_link_tag 'development_favicon.ico'
+    - else
+      = favicon_link_tag
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+    = csrf_meta_tags
+  body
+    .page-wrapper
+      header= render 'layouts/header'
+
+      main id="#{params[:controller]}-#{params[:action]}"
+        = yield
+
+      footer= render 'layouts/footer'
+
+    - if Rails.env.development?
+      #development-indicator
+        = link_to 'Development Mode', '#', class: 'support'
+
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    = render 'shared/google_analytics'
