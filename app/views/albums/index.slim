@@ -1,5 +1,9 @@
-h1 Albums
+h1.center Albums
 
 - @albums.each do |album|
-  .row
-    = album.name
+  .card-panel.album
+    .album__title
+      = album.name
+
+    .album__description
+      = album.description

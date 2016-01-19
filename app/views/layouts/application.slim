@@ -16,7 +16,8 @@ html lang="en"
       header= render 'layouts/header'
 
       main id="#{params[:controller]}-#{params[:action]}"
-        = yield
+        .responsive-margin-container
+          = yield
 
       footer= render 'layouts/footer'
 
