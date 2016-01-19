@@ -96,7 +96,7 @@ gem 'newrelic_rpm'
 # gem 'zip-zip' # will load compatibility for old rubyzip API.
 
 # Features
-# gem 'devise'
+gem 'devise'
 # gem 'sorcery' # Install instructions: https://github.com/NoamB/sorcery
 # gem 'stripe'
 # gem 'attr_encrypted'
