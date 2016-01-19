@@ -9,6 +9,7 @@ html lang="en"
     - else
       = favicon_link_tag
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
   body
     .page-wrapper
@@ -23,5 +24,4 @@ html lang="en"
       #development-indicator
         = link_to 'Development Mode', '#', class: 'support'
 
-    = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = render 'shared/google_analytics'
