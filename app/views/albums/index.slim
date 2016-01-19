@@ -1,5 +1,10 @@
 h1.center Albums
 
+= form_tag albums_path, method: 'get' do
+  .flexy-input-form
+    = text_field_tag :search, params[:search], placeholder: "Search albums...", class: 'flexy-input-field'
+    = submit_tag "Search", class: 'btn btn-large flexy-input-button'
+
 - @albums.each do |album|
   = link_to album do
     .card-panel.album
