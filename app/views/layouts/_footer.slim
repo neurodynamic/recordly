@@ -1,16 +1,16 @@
-ul
-  / li
-    / = image_tag 'client_logo.jpg'
-  li
-    = "Copyright #{Date.today.year} "
-    = link_to "Client Company, Inc.", 'http://www.example.com'
-  li
-    | Website by 
-    = link_to "Neurodynamic", "http://www.neurodynamic.online"
-  / li
-    / - if admin_signed_in?
-    /   = "Logged in as #{current_admin.email}"
-    /   | |
-    /   = link_to "Logout", destroy_admin_session_path, method: :delete
-    / - else
-    /   = link_to "Admin Login", new_admin_session_path
+/ ul
+/   / li
+/     / = image_tag 'client_logo.jpg'
+/   li
+/     = "Copyright #{Date.today.year} "
+/     = link_to "Client Company, Inc.", 'http://www.example.com'
+/   li
+/     | Website by 
+/     = link_to "Neurodynamic", "http://www.neurodynamic.online"
+/   / li
+/     / - if admin_signed_in?
+/     /   = "Logged in as #{current_admin.email}"
+/     /   | |
+/     /   = link_to "Logout", destroy_admin_session_path, method: :delete
+/     / - else
+/     /   = link_to "Admin Login", new_admin_session_path
